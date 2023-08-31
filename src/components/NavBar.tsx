@@ -20,7 +20,12 @@ export function NavBar({ setPageToRender }: NavBarProps): JSX.Element {
                     setPageToRender={setPageToRender}
                 />
             ))}
-            <Box verticalAlign="bottom">
+            <Box
+                position="relative"
+                display="flex"
+                justifyContent="flex-end"
+                alignItems="flex-end"
+            >
                 <Button colorScheme="blackAlpha" onClick={handleSelectHome}>
                     🏠 Home
                 </Button>

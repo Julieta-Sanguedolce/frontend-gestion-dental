@@ -12,7 +12,7 @@ export function NavButton({
     const handleSelectCategory = () => setPageToRender(category.id);
 
     return (
-        <Button colorScheme="blackAlpha" onClick={handleSelectCategory}>
+        <Button colorScheme="whiteAlpha" onClick={handleSelectCategory}>
             {category.title}
         </Button>
     );

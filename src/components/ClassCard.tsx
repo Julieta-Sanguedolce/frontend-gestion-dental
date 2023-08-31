@@ -28,7 +28,7 @@ export function ClassCard({
                     src={category.imageLink}
                     alt={category.imageDesc}
                     borderRadius="lg"
-                    boxSize="400px"
+                    boxSize="20rem"
                     objectFit="contain"
                 />
             </CardBody>
