@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Costs",
+        "description": "Check, add and modify current variable and fixed costs",
+        "imageLink": "https://media.gettyimages.com/id/1582008163/vector/piggy-bank.jpg?s=2048x2048&w=gi&k=20&c=VSt1uWe5CETOMpu-UTsUZvye0l1DgOnPQkBthmaxzWw=",
+        "imageDesc": "Pink piggy bank"
+    },
+    {
+        "id": 2,
+        "title": "Procedures",
+        "description": "Check, add and modify available procedures and their prices",
+        "imageLink": "https://media.gettyimages.com/id/97213092/vector/man-pulling-teeth-with-pliers.jpg?s=2048x2048&w=gi&k=20&c=VhXI1DJ97Plar8tTVnTsMnwuQcgRlkJBjaNWjNchAnI=",
+        "imageDesc": "Man removing a tooth"
+    },
+    {
+        "id": 3,
+        "title": "Clients",
+        "description": "Client list and information",
+        "imageLink": "https://media.gettyimages.com/id/97240867/vector/crowd-of-people.jpg?s=2048x2048&w=gi&k=20&c=wHRh6g5bCWlbdxKa4diGT_rJM-bKIJEOJlGoN6Y5nn8=",
+        "imageDesc": "A crowd of people"
+    },
+    {
+        "id": 4,
+        "title": "Dashboard",
+        "description": "Data analysis and insights",
+        "imageLink": "https://media.gettyimages.com/id/1202062035/vector/set-of-graphs-on-the-whiteboard-vector-cartoon-statistics-data-analysis-business-vector.jpg?s=2048x2048&w=gi&k=20&c=9afknuKMkv1f__SRReXjnuKBYUVQZUAk2LZR1TA1tqY=",
+        "imageDesc": "Two charts"
+    }
+]
