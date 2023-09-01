@@ -4,6 +4,12 @@ import { Body } from "./Body";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
+import { PatientsTable } from "./Customer-page/PatientsTable";
+
+export const baseURL =
+    process.env.NODE_ENV === "production"
+        ? "https://dental-management-app.onrender.com"
+        : "http://localhost:4000";
 
 function App() {
     const [pageToRender, setPageToRender] = useState(0);
@@ -23,7 +29,7 @@ function App() {
                     )}
                     {pageToRender === 1 && <p>1</p>}
                     {pageToRender === 2 && <p>2</p>}
-                    {pageToRender === 3 && <p>3</p>}
+                    {pageToRender === 3 && <PatientsTable />}
                     {pageToRender === 4 && <p>4</p>}
                 </div>
                 <div className="Footer">
