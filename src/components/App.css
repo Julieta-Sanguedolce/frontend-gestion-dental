@@ -116,9 +116,12 @@ main {
     text-align: center;
     justify-content: center;
     padding: 2rem 1rem;
-    font-size: x-large;
-    font-weight: 600;
     background-color: hsl(0, 0%, 92%);
+}
+
+.Header h1 {
+    font-size: xx-large;
+    font-weight: 600;
 }
 
 .Nav-Bar {
@@ -129,7 +132,7 @@ main {
 
 .Body {
     grid-area: Body;
-    padding: 5rem 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,4 +143,24 @@ main {
 .Footer {
     grid-area: Footer;
     background-color: hsl(0, 0%, 98%);
+}
+
+.PatientPage {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.PatientPage h1 {
+    font-size: x-large;
+    background-color: hsl(0, 0%, 98%);
+    text-align: center;
+    justify-content: center;
+}
+
+.AddPatient {
+    font-size: large;
+    text-align: right;
+    justify-content: right;
+    margin-bottom: 2rem;
 }

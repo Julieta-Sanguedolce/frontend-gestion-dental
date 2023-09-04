@@ -19,3 +19,15 @@ export interface Customer {
     last_date_of_visit: string;
     registration_date: string;
 }
+
+export interface NewPatient {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    address: string;
+    city: string;
+    country: string;
+    date_of_birth: string;
+    last_date_of_visit: string;
+}

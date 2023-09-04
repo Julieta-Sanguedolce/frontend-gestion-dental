@@ -4,7 +4,7 @@ import { Body } from "./Body";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
-import { PatientsTable } from "./Customer-page/PatientsTable";
+import { PatientMain } from "./Customer-page/PatientMain";
 
 export const baseURL =
     process.env.NODE_ENV === "production"
@@ -27,10 +27,10 @@ function App() {
                     {pageToRender === 0 && (
                         <Body setPageToRender={setPageToRender} />
                     )}
-                    {pageToRender === 1 && <p>1</p>}
-                    {pageToRender === 2 && <p>2</p>}
-                    {pageToRender === 3 && <PatientsTable />}
-                    {pageToRender === 4 && <p>4</p>}
+                    {pageToRender === 1 && <p>1 IN CONSTRUCTION</p>}
+                    {pageToRender === 2 && <p>2 IN CONSTRUCTION</p>}
+                    {pageToRender === 3 && <PatientMain />}
+                    {pageToRender === 4 && <p>4 IN CONSTRUCTION</p>}
                 </div>
                 <div className="Footer">
                     <Footer />

@@ -1,35 +1,44 @@
 import { useEffect, useState } from "react";
-import { Customer } from "../../types";
+import { Customer, NewPatient } from "../../types";
 import { baseURL } from "../App";
 import axios from "axios";
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
-    Button,
-    ButtonGroup,
-} from "@chakra-ui/react";
+import { Table, Thead, Tbody, Tr, Th, TableContainer } from "@chakra-ui/react";
+import { PatientsTableRow } from "./PatientsTableRow";
+
+export const initialPatient: NewPatient = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    country: "",
+    date_of_birth: "",
+    last_date_of_visit: "",
+};
 
 export function PatientsTable(): JSX.Element {
     const [listOfPatients, setListOfPatients] = useState<Customer[]>([]);
+    const [aux, setAux] = useState(0);
 
     async function fetchPatientList() {
         const response = await axios.get(baseURL + "/customers");
         const patientList = await response.data;
         setListOfPatients(patientList);
     }
-    console.log(listOfPatients);
+
     useEffect(() => {
         fetchPatientList();
-    }, [listOfPatients]);
+    }, [aux]);
 
-    async function handleDelete(id: number) {
-        axios.delete(baseURL + `/customers/${id}`);
-    }
+    const patientsTableRows = listOfPatients.map((eachPatient) => (
+        <PatientsTableRow
+            key={eachPatient.client_id}
+            patient={eachPatient}
+            aux={aux}
+            setAux={setAux}
+        />
+    ));
 
     return (
         <TableContainer>
@@ -48,35 +57,7 @@ export function PatientsTable(): JSX.Element {
                         <Th textAlign="center">Manage</Th>
                     </Tr>
                 </Thead>
-                <Tbody>
-                    {listOfPatients.map((patient) => (
-                        <Tr key={patient.client_id}>
-                            <Td>{patient.first_name}</Td>
-                            <Td>{patient.last_name}</Td>
-                            <Td>{patient.email}</Td>
-                            <Td>{patient.phone}</Td>
-                            <Td>{patient.address}</Td>
-                            <Td>{patient.city}</Td>
-                            <Td>{patient.country}</Td>
-                            <Td>{patient.date_of_birth.substring(0, 10)}</Td>
-                            <Td>
-                                {patient.last_date_of_visit.substring(0, 10)}
-                            </Td>
-                            <Td>
-                                <ButtonGroup>
-                                    <Button>✏️</Button>
-                                    <Button
-                                        onClick={() =>
-                                            handleDelete(patient.client_id)
-                                        }
-                                    >
-                                        🗑️
-                                    </Button>
-                                </ButtonGroup>
-                            </Td>
-                        </Tr>
-                    ))}
-                </Tbody>
+                <Tbody>{patientsTableRows}</Tbody>
             </Table>
         </TableContainer>
     );
